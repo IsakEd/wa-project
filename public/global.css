@@ -1,0 +1,23 @@
+html,
+body,
+div,
+span {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+:root {
+	--primary-color: #fafafa;
+	--secondary-color: #ffffff;
+	--tertiary-color: #eeeeee;
+	--contrast-color: #848484;
+	--accent-color: #032dff;
+	--icon-size: 1.5em;
+	--prose-font: 'Pathway Extreme';
+	font-family: var(--prose-font);
+	background-color: var(--primary-color);
+}
