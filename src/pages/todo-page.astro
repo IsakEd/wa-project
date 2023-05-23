@@ -5,13 +5,13 @@ import Todos from "../components/Todos.svelte";
 
 <MainLayout>
 	<h1>Todos</h1>
-	<div class="todo-container">
-		<Todos />
+	<div class="todos">
+		<Todos client:load />
 	</div>
 </MainLayout>
 
 <style>
-	.todo-container {
+	.todos {
 		width: 45%;
 	}
 </style>
