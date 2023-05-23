@@ -1,4 +1,6 @@
 import { writable } from 'svelte/store';
+import fromLocalStorage from './internal-adapters/fromLocalStorage'
+
 const todo_template = [
     {
         name: 'Send cookies to outer space',
@@ -23,4 +25,4 @@ const todo_template = [
         done: false
     }
 ];
-export const todos = writable(todo_template);
+export const todos = writable(fromLocalStorage("todos", todo_template));
