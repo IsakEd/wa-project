@@ -8,27 +8,70 @@ const todo_template = [
         dateCreated: new Date('2022-03-25'),
         id: 1,
         done: false,
-        deadline: new Date('2023-01-25')
+        deadline: new Date('2023-01-25'),
+        parent: {}
     },
     {
         name: 'Get ready to rumble',
         properties: ['passion', 'hard'],
         dateCreated: new Date('2022-03-25'),
         id: 2,
-        done: true
+        done: true,
+        parent: {}
     },
     {
         name: 'Scramble the big eggs',
         properties: ['urgent'],
         dateCreated: new Date('2022-03-25'),
         id: 3,
-        done: false
+        done: false,
+        parent: { type: 'course', id: '1' }
     }
 ];
 export const todos = writable(fromLocalStorage("todos", todo_template));
 
 
-/* 
-This is going to be fun. I will try to implement a self-referential store. Pointers would be very nice here,
+const courses_template = [
+    {
+        name: 'Web Applications',
+        shorthand: 'WA',
+        id: 1,
+        children: [{ type: 'project', id: 1 }],
+        parent: { type: 'area', id: 1 }
+    },
+    {
+        name: 'Electric Vehicles',
+        shorthand: 'EV',
+        id: 1,
+        children: [{ type: 'project', id: 1 }, { type: 'exam', id: 1 }],
+        parent: { type: 'area', id: 1 }
+    },
+];
 
-*/
+
+const projects_template = [
+    {
+        name: 'Platform task',
+        shorthand: 'PF',
+        id: 1,
+        children: [{ type: 'project', id: 1 }],
+        parent: { type: 'course', id: 1 }
+
+    }
+];
+
+const areas_template = [
+    {
+        name: 'studies',
+        shortand: 'ST',
+        id: 1,
+        children: [{ type: 'course', id: 1 }]
+    },
+    {
+        name: 'health',
+        shortand: 'H',
+        id: 2,
+        children: []
+    },
+]
+export const areas = writable(fromLocalStorage("areas", areas_template));

@@ -1,7 +1,7 @@
 <script>
-    import { shortcut } from "../lib/shortcut.js";
-    import ActionButton from "../lib/ActionButton.svelte";
-    import { todos } from "../store";
+    import { shortcut } from "../../lib/shortcut.js";
+    import ActionButton from "../../lib/ActionButton.svelte";
+    import { todos } from "../../store";
     let value = "";
     let attributes = { urgent: false, hard: false, passion: false };
     $: chosenAttributes = Object.keys(attributes).filter(

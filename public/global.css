@@ -49,3 +49,11 @@ img {
     background-color: var(--primary-color);
     font-family: var(--prose-font);
 }
+
+.card {
+    width: 12em;
+    height: 9em;
+    border: 1px solid var(--contrast-color);
+    border-radius: .5em;
+    margin-right: .8em;
+}

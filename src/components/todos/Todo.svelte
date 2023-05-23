@@ -1,6 +1,6 @@
 <script>
     import AttributeIcons from "./AttributeIcons.svelte";
-    import { todos } from "../store";
+    import { todos } from "../../store";
     export let name;
     export let id;
     export let properties;
