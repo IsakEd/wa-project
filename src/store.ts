@@ -26,3 +26,9 @@ const todo_template = [
     }
 ];
 export const todos = writable(fromLocalStorage("todos", todo_template));
+
+
+/* 
+This is going to be fun. I will try to implement a self-referential store. Pointers would be very nice here,
+
+*/
