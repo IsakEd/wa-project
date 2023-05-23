@@ -22,3 +22,11 @@ span {
 	font-family: var(--prose-font);
 	background-color: var(--primary-color);
 }
+
+.invisible{
+    height: fit-content;
+    width: fit-content;
+    background-color: none;
+    border: none;
+    
+} 
