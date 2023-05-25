@@ -1,70 +1,64 @@
 <script>
-	export let showModal; // boolean
+  export let showModal; // boolean
 
-	let dialog; // HTMLDialogElement
+  let dialog; // HTMLDialogElement
 
-	$: if (dialog && showModal) dialog.showModal();
+  $: if (dialog && showModal) dialog.showModal();
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <dialog
-	bind:this={dialog}
-	on:close={() => (showModal = false)}
-	on:click|self={() => dialog.close()}
+  bind:this={dialog}
+  on:close={() => (showModal = false)}
+  on:click|self={() => dialog.close()}
 >
-	<div class="flex" on:click|stopPropagation>
-		<slot name="header" />
-		<slot />
-		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()}>close</button>
-	</div>
+  <div class="flex" on:click|stopPropagation>
+    <slot name="header" />
+    <slot />
+    <!-- svelte-ignore a11y-autofocus -->
+  </div>
 </dialog>
 
 <style>
-	dialog {
-		max-width: 32em;
-		border-radius: 0.2em;
-		border: none;
-		padding: 0 .5em;
+  dialog {
+    max-width: 32em;
+    border-radius: 0.2em;
+    border: none;
+    padding: 0 0.5em;
+  }
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  dialog > div {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  dialog[open] {
+    animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes zoom {
+    from {
+      transform: scale(0.95);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  dialog[open]::backdrop {
+    animation: fade 0.2s ease-out;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-	}
-	dialog::backdrop {
-		background: rgba(0, 0, 0, 0.1);
-	}
-	dialog > div{
-		padding: .5em;
-		margin-bottom: .5em;
-	}
-	dialog[open] {
-		animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-	}
-	@keyframes zoom {
-		from {
-			transform: scale(0.95);
-		}
-		to {
-			transform: scale(1);
-		}
-	}
-	dialog[open]::backdrop {
-		animation: fade 0.2s ease-out;
-	}
-	@keyframes fade {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-	button {
-		margin-top: .1em;
-		display: block;
-		width: 50%;
-	}
-	.flex{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>

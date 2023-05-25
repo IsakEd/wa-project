@@ -16,9 +16,6 @@ input[type="checkbox"] {
   accent-color: var(--accent-color);
 }
 
-/* This is not optimal but done just to speed up the creative process somewhat, it's
-    just to prevent auto-sizing to 0px when making a rough draft of components with icons */
-
 :root {
   --text-color: #020508;
   --primary-color: #e4effa;
@@ -33,9 +30,10 @@ input[type="checkbox"] {
   background-color: var(--primary-color);
 }
 
+/* This is not optimal but done just to speed up the creative process somewhat, it's
+    just to prevent auto-sizing to 0px when making a rough draft of components with icons */
 img {
-  height: var(--icon-size);
-  width: var(--icon-size);
+  height: 70%;
 }
 
 /* This class is used mainly for buttons that cover the icons, which are needed for accessibility's sake. */

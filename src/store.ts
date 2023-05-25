@@ -1,6 +1,5 @@
-import { writable, readable } from "svelte/store";
+import { writable, readable, derived } from "svelte/store";
 import fromLocalStorage from "./internal-adapters/fromLocalStorage";
-import { log } from "astro/dist/core/logger/core";
 
 const todo_template = [
   {
@@ -77,17 +76,6 @@ const area_template = [
         start: 95,
         current: 103,
         finish: 120,
-        deadline: new Date("2023-11-28"),
-      },
-      {
-        name: "Really good grades",
-        id: 2,
-        measurement: "average grade > 4.5",
-        dateCreated: new Date("2020-05-05"),
-        start: 3.5,
-        current: 3.7,
-        finish: 4.5,
-        unit: "grade point average",
         deadline: new Date("2023-11-28"),
       },
       {

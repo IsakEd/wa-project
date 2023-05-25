@@ -4,6 +4,7 @@
 	export let current;
 	export let finish;
 	export let unit;
+	
 	let progress = 0;
 	let startLabel;
 	let endLabel;
