@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/svelte": "^2.2.0",
     "astro": "^2.5.4",
+    "relational-json": "^3.3.3",
     "svelte": "^3.59.1"
   }
 }

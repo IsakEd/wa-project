@@ -17,6 +17,7 @@
                 dateCreated: new Date(),
                 id: $todos.length + 1, // This might create bugs, maybe?
                 done: false,
+                parent: { type: "area", id: 1 },
             },
         ]);
         value = "";
