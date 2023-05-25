@@ -5,10 +5,11 @@
 </script>
 
 <div class="card">
+	{#if img_name}
+		<img src={`/areas/${img_name}`} alt={img_name} />
+	{/if}
 	<span class="text">
-		{#if img_name}
-			<img src={`/areas/${img_name}`} alt={img_name} />
-		{/if}
+
 		<h1>{title}</h1>
 		<h3 class="subtitle">{subtitle || ''}</h3>
 	</span>
@@ -33,7 +34,7 @@
 	}
 	img {
 		padding-top: 1em;
-
+		aspect-ratio: calc(16/9);
 		width: 90%;
 	}
 	.text {

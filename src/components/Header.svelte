@@ -1,6 +1,4 @@
 <script>
-	import Modal from '../lib/Modal.svelte';
-	let showModal = false;
 </script>
 
 <div class="header">
@@ -21,12 +19,11 @@
 	}
 
 	.header {
-		padding: 0 0.5rem;
+		padding: 0 0.25rem;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		color: var(--primary-color);
-		background-color: var(--accent-color);
+		background-color: var(--secondary-color);
 		border-bottom: 1px solid var(--contrast-color);
 	}
 

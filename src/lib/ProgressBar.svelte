@@ -3,7 +3,6 @@
 	export let start;
 	export let current;
 	export let finish;
-	export let type;
 	export let unit;
 	let progress = 0;
 	let startLabel;

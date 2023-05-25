@@ -15,7 +15,6 @@
 	<div class="flex" on:click|stopPropagation>
 		<slot name="header" />
 		<slot />
-		<br>
 		<!-- svelte-ignore a11y-autofocus -->
 		<button autofocus on:click={() => dialog.close()}>close</button>
 	</div>
@@ -59,6 +58,7 @@
 		}
 	}
 	button {
+		margin-top: .1em;
 		display: block;
 		width: 50%;
 	}
