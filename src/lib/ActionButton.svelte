@@ -5,10 +5,11 @@
 
 <style>
 	.action-button {
-		color: var(--accent-color);
+		color: whitesmoke;
 		border-radius: 5px;
-		background-color: var(--secondary-color);
-		border: 1px solid var(--accent-color);
+		background-color: var(--primary-button);
+		border: none;
+		border-radius: 10%;
 	}
 	.action-button :hover {
 		background-color: var(--contrast-color) !important;
