@@ -14,14 +14,16 @@
   function addGoal() {
     let currentDate = new Date();
 
-    dispatch("goal", {
-      name: name,
-      measurement: measurement,
-      dateCreated: currentDate,
-      start: start,
-      current: current,
-      finish: fininsh,
-      deadline: deadline,
+    dispatch("newGoal", {
+      goalObject: {
+        name: name,
+        measurement: measurement,
+        dateCreated: currentDate,
+        start: start,
+        current: current,
+        finish: finish,
+        deadline: deadline,
+      },
     });
   }
 </script>

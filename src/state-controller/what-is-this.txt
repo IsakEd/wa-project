@@ -1,6 +1,0 @@
-Svelte has an amazing state management system as it is, so why?
-
-The problem is that since todos, goals and areas are to have inheritance, they need to have
-This method is computationally intensive and overly complicated, but the alternative would be to 
-
-This would however create copies of the. This controller is fat, but it's also O(n) 

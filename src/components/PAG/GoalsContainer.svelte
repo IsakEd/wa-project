@@ -14,6 +14,22 @@
   indexStore.subscribe((newIndex) => {
     selectedGoals = get(areas)[newIndex].goals;
   });
+
+  function addGoal(event) {
+    const newGoalWithId = {
+      ...event.detail.goalObject,
+      id: selectedGoals.length,
+    };
+
+    // ! Mutation
+    const newAreas = get(areas);
+    newAreas[$indexStore].goals = [
+      ...newAreas[$indexStore].goals,
+      newGoalWithId,
+    ];
+
+    areas.set(newAreas); // Works but does not re-render
+  }
 </script>
 
 <div class="content">
@@ -38,7 +54,7 @@
           <GoalCard {goal} />
         </div>
       {/each}
-      <AddCard />
+      <AddCard on:newGoal={addGoal} />
     </div>
   </div>
 </div>
