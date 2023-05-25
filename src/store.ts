@@ -1,5 +1,6 @@
-import { writable } from 'svelte/store';
+import { writable, readable } from 'svelte/store';
 import fromLocalStorage from './internal-adapters/fromLocalStorage'
+import { log } from 'astro/dist/core/logger/core';
 
 const todo_template = [
     {
@@ -75,3 +76,43 @@ const areas_template = [
     },
 ]
 export const areas = writable(fromLocalStorage("areas", areas_template));
+
+export const reftree = {
+    todo: todos,
+    area: areas
+}
+
+todos.subscribe(newTodos => {
+    const newTodoId = newTodos[newTodos.length - 1].id
+    const parentOfNewTodo = newTodos[newTodos.length - 1].parent
+    console.log(parentOfNewTodo)
+    /*
+        switch (parentOfNewTodo.type) {
+            case 'area':
+                areas.update(areaState => areaState.map((area) => {
+                    if (area.id == parentOfNewTodo.id) {
+                        console.log("found him");
+                        area.children = [...area.children, { type: "todo", id: newTodoId }]
+    
+                    }
+                }
+                ))
+    
+    
+        }
+    
+    */
+}
+)
+function appendChild(parentIdentifier, childIdentifier) {
+
+}
+
+function removeChild(parentIdentifier, childIdentifier) {
+
+}
+
+function modifyByIdentifier(identifier, callback) { // Enters a scope
+
+}
+
