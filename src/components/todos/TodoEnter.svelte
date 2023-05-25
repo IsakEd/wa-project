@@ -68,7 +68,7 @@
         outline: none;
         resize: none;
         font-family: "Montserrat", sans-serif;
-        background-color: var(--primary-color);
+        background-color: var(--secondary-color);
     }
 
     #top-row {

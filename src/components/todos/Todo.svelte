@@ -36,7 +36,6 @@
         border-radius: 10px;
         padding: 1em 1em 1em 1em;
         margin-bottom: 0.5em;
-        background-color: var(--primary-color);
         font-family: var(--prose-font);
     }
 </style>

@@ -8,8 +8,8 @@ span {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
-  color: #020508;
   font-family: sans-serif;
+  color: var(--text-color);
 }
 
 input[type="checkbox"] {
@@ -20,8 +20,9 @@ input[type="checkbox"] {
     just to prevent auto-sizing to 0px when making a rough draft of components with icons */
 
 :root {
-  --primary-color: #d9e8f7;
-  --secondary-color: #ffffff;
+  --text-color: #020508;
+  --primary-color: #e4effa;
+  --secondary-color: #f7fafd;
   --primary-button: #871d50;
   --tertiary-color: #eeeeee;
   --contrast-color: #848484;
@@ -51,7 +52,7 @@ img {
   border-radius: 10px;
   padding: 1em 1em 1em 1em;
   margin-bottom: 0.5em;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   font-family: var(--prose-font);
 }
 

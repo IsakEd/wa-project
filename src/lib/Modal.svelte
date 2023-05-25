@@ -12,13 +12,12 @@
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
 >
-	<div on:click|stopPropagation>
+	<div class="flex" on:click|stopPropagation>
 		<slot name="header" />
-		<hr />
 		<slot />
-		<hr />
+		<br>
 		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()}>close modal</button>
+		<button autofocus on:click={() => dialog.close()}>close</button>
 	</div>
 </dialog>
 
@@ -27,13 +26,15 @@
 		max-width: 32em;
 		border-radius: 0.2em;
 		border: none;
-		padding: 0;
+		padding: 0 .5em;
+
 	}
 	dialog::backdrop {
-		background: rgba(0, 0, 0, 0.3);
+		background: rgba(0, 0, 0, 0.1);
 	}
-	dialog > div {
-		padding: 1em;
+	dialog > div{
+		padding: .5em;
+		margin-bottom: .5em;
 	}
 	dialog[open] {
 		animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -59,5 +60,11 @@
 	}
 	button {
 		display: block;
+		width: 50%;
+	}
+	.flex{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 </style>
