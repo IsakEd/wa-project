@@ -30,35 +30,7 @@ const todo_template = [
 ];
 export const todos = writable(fromLocalStorage("todos", todo_template));
 
-const courses_template = [
-  {
-    name: "Web Applications",
-    shorthand: "WA",
-    id: 1,
-    children: [{ type: "project", id: 1 }],
-    parent: { type: "area", id: 1 },
-  },
-  {
-    name: "Electric Vehicles",
-    shorthand: "EV",
-    id: 1,
-    children: [
-      { type: "project", id: 1 },
-      { type: "exam", id: 1 },
-    ],
-    parent: { type: "area", id: 1 },
-  },
-];
 
-const projects_template = [
-  {
-    name: "Platform task",
-    shorthand: "PF",
-    id: 1,
-    children: [{ type: "project", id: 1 }],
-    parent: { type: "course", id: 1 },
-  },
-];
 
 // AREAS
 const area_template = [
