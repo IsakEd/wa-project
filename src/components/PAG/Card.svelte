@@ -35,7 +35,7 @@
   img {
     padding-top: 1em;
     width: 90%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 17/9;
   }
   .text {
     padding: 0 0.5em;
