@@ -17,13 +17,15 @@ input[type="checkbox"] {
 }
 
 :root {
-  --text-color: #020508;
-  --primary-color: #e4effa;
-  --secondary-color: #f7fafd;
-  --primary-button: #871d50;
-  --tertiary-color: #eeeeee;
+  --text-color: #07090d;
+  --primary-color: #ffffff;
+  --secondary-color: #bbdffc;
+  --tertiary-color: #4caaf7;
+  --accent-color: #0c6bb8;
+  --accent-shadow: #06375f;
+  --primary-button:#108df4;
   --contrast-color: #848484;
-  --accent-color: #1e320b;
+
   --icon-size: 1.5em;
   --prose-font: "Montserrat";
   font-family: sans-serif;

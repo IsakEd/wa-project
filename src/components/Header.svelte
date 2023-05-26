@@ -1,10 +1,12 @@
 <script>
+
+	let showModal = false;
 </script>
 
 <div class="header">
 	<button class="invisible"> <img class="header-icon" src="/menu.svg" alt="menu" /> </button>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<h1>My page</h1>
+	<h1>WA project</h1>
 	<button class="invisible"> <img class="header-icon" src="/settings.svg" alt="menu" /> </button>
 
 </div>

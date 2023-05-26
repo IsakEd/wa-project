@@ -1,9 +1,69 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Areas from "../components/PAG/Areas.svelte";
-import GoalsContainer from "../components/PAG/GoalsContainer.svelte";
+
 ---
 
 <MainLayout>
-  <GoalsContainer client:load />
+
+
+    <h1>This is text</h1>
+
+    <main>
+        <div  id="cards-container">
+            <div id="cards">
+                <div onclick="window.location='/goals'" class="section-card" id="goals">
+                    <h2>Goals page</h2>
+                </div>
+                <div onclick="window.location='/todo-page'" class="section-card" id="todos">
+                    <h2>Todo page</h2>
+                </div>
+
+            </div>
+
+    </div>
+
+    </main>
+
+
+
+
+
+
 </MainLayout>
+
+
+<style >
+    #cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6em;
+    }
+
+    #cards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .section-card {
+        width: 18em;
+        height: 22em;
+        border-radius: 3%;
+        box-shadow: 3px 3px 2px 1px var(--accent-shadow);
+
+    }
+
+    #goals {
+        margin-right: 2em;
+        background: linear-gradient(90deg, var(--accent-color) 0%, var(--tertiary-color) 100%);
+    }
+    #todos {
+        background: linear-gradient(90deg, var(--tertiary-color) 0%, var(--secondary-color) 100%);
+    }
+
+    .section-card h1, h2{
+        text-align: center;
+    }
+</style>
