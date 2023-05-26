@@ -27,7 +27,7 @@
       ...newAreas[$indexStore].goals,
       newGoalWithId,
     ];
-
+    console.log(newAreas);
     areas.set(newAreas); // Works but does not re-render
   }
 </script>

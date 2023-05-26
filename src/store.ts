@@ -112,7 +112,7 @@ const area_template = [
         deadline: new Date("2023-11-28"),
       },
     ],
-    dateCreated: new Date(),
+    dateCreated: new Date("2023-05-20"),
 
     id: 2,
     image: "education.jpg",
@@ -134,7 +134,7 @@ const area_template = [
         deadline: new Date("2078-11-28"),
       },
     ],
-    dateCreated: new Date(),
+    dateCreated: new Date("2023-05-20"),
 
     id: 3,
     image: "field.avif",

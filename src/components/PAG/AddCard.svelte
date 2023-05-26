@@ -9,20 +9,20 @@
   let start = 0;
   let current = 0;
   let finish = 100;
-  let deadline = new Date();
+
+  let startDate = new Date(null);
+  let deadline = new Date(null);
 
   function addGoal() {
-    let currentDate = new Date();
-
     dispatch("newGoal", {
       goalObject: {
         name: name,
         measurement: measurement,
-        dateCreated: currentDate,
+        dateCreated: new Date(startDate),
         start: start,
         current: current,
         finish: finish,
-        deadline: deadline,
+        deadline: new Date(deadline),
       },
     });
   }
@@ -41,6 +41,7 @@
     <input class="spaced" type="text" bind:value={measurement} />
     <div class="spaced">start point</div>
     <input class="spaced" type="number" bind:value={start} />
+    <input class="spaced" type="date" bind:value={startDate} />
     <div class="spaced">your current progress</div>
     <input class="spaced" type="number" bind:value={current} />
     <div class="spaced">goal value</div>
