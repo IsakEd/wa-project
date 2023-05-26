@@ -5,7 +5,7 @@
   import { get, writable } from "svelte/store";
   import AddCard from "./AddCard.svelte";
 
-  const indexStore = writable(0); // Store with the index value
+  const indexStore = writable(0); // Stores the id of the currently selected area
   $: index = get(indexStore);
   let selectedGoals = get(areas)[$indexStore].goals;
 
@@ -18,7 +18,7 @@
   function addGoal(event) {
     const newGoalWithId = {
       ...event.detail.goalObject,
-      id: selectedGoals.length,
+      id: index * 100 + selectedGoals.length,
     };
 
     // ! Mutation

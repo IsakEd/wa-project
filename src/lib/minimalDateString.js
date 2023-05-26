@@ -1,4 +1,4 @@
-export function minimalDateString(date: Date): string {
+export function minimalDateString(date) {
   const today = new Date();
 
   if (

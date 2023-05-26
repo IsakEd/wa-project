@@ -68,26 +68,26 @@ const area_template = [
     goals: [
       {
         name: "120kg bench",
-        id: 1,
+        id: 101,
         measurement: "weight lifted with good form",
         unit: "kilograms",
         dateCreated: new Date("2022-10-03"),
 
         start: 95,
-        current: 103,
+        current: 112,
         finish: 120,
         deadline: new Date("2023-11-28"),
       },
       {
-        name: "Lose weight",
-        id: 3,
-        measurement: "morning weight below 80kgs",
-        unit: "kilograms",
+        name: "20 second L-sit",
+        id: 102,
+        measurement: "90+ degree L-sit held for at least 20 seconds",
+        unit: "subjective",
         dateCreated: new Date("2022-12-25"),
 
-        start: 92,
-        current: 84,
-        finish: 80,
+        start: 0,
+        current: 4,
+        finish: 20,
         deadline: new Date("2023-11-28"),
       },
     ],
@@ -102,7 +102,7 @@ const area_template = [
     goals: [
       {
         name: "Really good grades",
-        id: 2,
+        id: 201,
         measurement: "average grade > 4.5",
         dateCreated: new Date("2020-05-05"),
         start: 3.5,
@@ -116,6 +116,28 @@ const area_template = [
 
     id: 2,
     image: "education.jpg",
+  },
+  {
+    name: "Life",
+    shorthand: "lf",
+    goals: [
+      {
+        name: "Visit 100 countries",
+        id: 301,
+        measurement: "non-airport time spent in a country",
+        unit: "amount",
+        dateCreated: new Date("1998-11-28"),
+
+        start: 1,
+        current: 24,
+        finish: 100,
+        deadline: new Date("2078-11-28"),
+      },
+    ],
+    dateCreated: new Date(),
+
+    id: 3,
+    image: "field.avif",
   },
 ];
 export const areas = writable(fromLocalStorage("areas", area_template));

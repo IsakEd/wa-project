@@ -1,7 +1,7 @@
 <script>
-  export let img_name;
+  export let img_name = null;
   export let title;
-  export let subtitle;
+  export let subtitle = "";
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
