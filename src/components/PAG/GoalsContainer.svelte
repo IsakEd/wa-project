@@ -69,6 +69,7 @@
   .card-container {
     display: flex;
     flex-direction: row;
+    overflow-x: scroll;
   }
 
   #card-container {

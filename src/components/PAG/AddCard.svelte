@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import yyyymmdd from "../../lib/yyyymmdd";
   const dispatch = createEventDispatcher();
   import Modal from "../../lib/Modal.svelte";
   let showModal = false;
@@ -10,8 +11,8 @@
   let current = 0;
   let finish = 100;
 
-  let startDate = new Date(null);
-  let deadline = new Date(null);
+  let startDate = yyyymmdd(new Date());
+  let deadline = yyyymmdd(new Date());
 
   function addGoal() {
     dispatch("newGoal", {
