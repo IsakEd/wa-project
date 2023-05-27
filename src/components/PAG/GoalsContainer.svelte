@@ -4,6 +4,9 @@
   import { areas } from "../../store";
   import { get, writable } from "svelte/store";
   import AddCard from "./AddCard.svelte";
+  //import { toLocalStorage } from "../../internal-adapters/toLocalStorage";
+  // TODO: fix the problem of implicit unwanted date conversion when writing to localStorage... It breaks the progress bar
+  //$: toLocalStorage("areas", $areas);
 
   const indexStore = writable(0); // Stores the id of the currently selected area
   $: index = get(indexStore);
@@ -29,6 +32,7 @@
     ];
     console.log(newAreas);
     areas.set(newAreas); // Works but does not re-render
+    selectedGoals = get(areas)[$indexStore].goals;
   }
 </script>
 
@@ -54,7 +58,7 @@
           <GoalCard {goal} />
         </div>
       {/each}
-      <AddCard on:newGoal={addGoal} />
+      <AddCard areaName={get(areas)[$indexStore].name} on:newGoal={addGoal} />
     </div>
   </div>
 </div>
@@ -69,7 +73,6 @@
   .card-container {
     display: flex;
     flex-direction: row;
-
   }
 
   #card-container {

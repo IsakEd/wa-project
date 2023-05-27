@@ -1,4 +1,6 @@
 <script>
+  export let areaName;
+  import ActionButton from "../../lib/ActionButton.svelte";
   import { createEventDispatcher } from "svelte";
   import yyyymmdd from "../../lib/yyyymmdd";
   const dispatch = createEventDispatcher();
@@ -34,22 +36,24 @@
   <img id="add" src="/plus.svg" alt="add" />
 </div>
 <Modal bind:showModal>
-  <h2 slot="header">Add a goal</h2>
+  <h2 slot="header">Add a goal to {areaName}</h2>
   <div class="contents">
-    <div class="spaced">What do you want to achieve?</div>
-    <input class="spaced" type="text" bind:value={name} />
-    <div class="spaced">what metric do you want to track by?</div>
-    <input class="spaced" type="text" bind:value={measurement} />
-    <div class="spaced">start point</div>
-    <input class="spaced" type="number" bind:value={start} />
-    <input class="spaced" type="date" bind:value={startDate} />
-    <div class="spaced">your current progress</div>
-    <input class="spaced" type="number" bind:value={current} />
-    <div class="spaced">goal value</div>
-    <input class="spaced" type="number" bind:value={finish} />
-    <div class="spaced">what's the deadline?</div>
-    <input class="spaced" type="date" bind:value={deadline} />
-    <button on:click={addGoal}>save</button>
+    <div>What do you want to achieve?</div>
+    <input type="text" bind:value={name} />
+    <div>what metric do you want to track by?</div>
+    <input type="text" bind:value={measurement} />
+    <div>start point</div>
+    <input type="number" bind:value={start} />
+    <div>start date</div>
+    <input type="date" bind:value={startDate} />
+    <div>your current progress</div>
+    <input type="number" bind:value={current} />
+    <div>goal value</div>
+    <input type="number" bind:value={finish} />
+    <div>what's the deadline?</div>
+    <input type="date" bind:value={deadline} />
+    <br />
+    <ActionButton on:click={addGoal}>Add</ActionButton>
   </div>
 </Modal>
 

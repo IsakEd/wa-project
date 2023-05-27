@@ -18,7 +18,7 @@
     <h1><a href="/todo-page">Todos</a></h1>
     <h1><a href="/goals">Goals</a></h1>
   {:else}
-    <h1>WA task</h1>
+    <h1><a href="/">WA task</a></h1>
   {/if}
   <button on:click={() => (showModal = true)} class="invisible">
     <img class="header-icon" src="/settings.svg" alt="settings" />
@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--secondary-color);
+    background-color: #fafafa;
     border-bottom: 1px solid var(--contrast-color);
   }
 
