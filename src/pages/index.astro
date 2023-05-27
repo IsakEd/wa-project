@@ -7,14 +7,16 @@ import MainLayout from "../layouts/MainLayout.astro";
     <div id="cards-container">
       <div id="cards">
         <div onclick="window.location='/goals'" class="section-card" id="goals">
-          <h2>Goals page</h2>
+          <h2>Goals</h2>
+          <img src="/goals-img.png" alt="todos" />
         </div>
         <div
           onclick="window.location='/todo-page'"
           class="section-card"
           id="todos"
         >
-          <h2>Todo page</h2>
+          <h2>Todo</h2>
+          <img src="/todos-img.png" alt="todos" />
         </div>
       </div>
     </div>
@@ -22,6 +24,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 </MainLayout>
 
 <style>
+  img {
+    width: 70%;
+    height: auto;
+  }
   #cards-container {
     display: flex;
     flex-direction: column;
@@ -36,6 +42,9 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   .section-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 18em;
     height: 22em;
     border-radius: 3%;
